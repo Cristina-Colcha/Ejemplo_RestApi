@@ -18,7 +18,7 @@ Before installing and running the application, make sure you have installed:
 
 1. Clone this repository:
 
-   git clone https://github.com/tu-usuario/mi-api-vista.git
+   git clone https://github.com/Cristina-Colcha/Ejemplo_RestApi.git
    cd my-api-vista
 ### Install the dependencies:
 
