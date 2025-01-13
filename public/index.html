@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API REST</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Rest Api</h1>
+        <p class="lead">Este es un ejemplo básico de una Rest API</p>
+
+    
+        <button id="loadUsersBtn" class="btn btn-primary">Ver Usuarios</button>
+
+        <table class="table mt-4" id="usersTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Función para cargar usuarios desde la API
+        $(document).ready(function() {
+            $('#loadUsersBtn').click(function() {
+                $.get('http://localhost:3000/usuarios', function(data) {
+ 
+                    $('#usersTable tbody').empty();
+
+                    data.forEach(function(usuario) {
+                        $('#usersTable tbody').append(`
+                            <tr>
+                                <td>${usuario.id}</td>
+                                <td>${usuario.nombre}</td>
+                            </tr>
+                        `);
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi API con Vista</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Bienvenido a mi API</h1>
+        <p class="lead">Este es un ejemplo básico de una API con una vista HTML.</p>
+        <a href="/usuarios" class="btn btn-primary">Ver Usuarios</a>
+    </div>
+</body>
+</html> -->
