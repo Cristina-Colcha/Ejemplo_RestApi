@@ -1,0 +1,53 @@
+# Rest Api users
+
+This is a REST API created with **Node.js** and **Express**, which includes an interactive HTML view to interact with user data. The application allows you to perform basic operations such as getting, creating, updating and deleting users, as well as viewing the data directly in the browser.
+
+## Features
+
+- REST API with CRUD operations for users:
+  - Get users
+
+## Prerequisites
+
+Before installing and running the application, make sure you have installed:
+
+- **Node.js** (version 14 or higher)
+- **npm** (Node.js package manager)
+
+## Installation
+
+1. Clone this repository:
+
+   git clone https://github.com/tu-usuario/mi-api-vista.git
+   cd my-api-vista
+### Install the dependencies:
+
+    npm install
+### Execute
+Start the server:
+    node index.js
+### Open your browser and go to:
+
+    http://localhost:3000
+### API Paths
+    Get all users
+    Method: GET
+    URL: /users
+    Response:
+    json
+
+    [
+    { “id”: 1, “name”: “John” },
+    { “id”: 2, “name”: “Ana” }
+    ]
+
+### Technologies Used.
+    Node.js: JavaScript execution environment.
+    Express: Minimalist framework to create the server.
+    jQuery: For the interaction with the API from the view.
+    Bootstrap: For responsive design.
+    HTML/CSS: For the structure and styles of the view.
+### Author
+    Cristina Colcha
+
+Translated with DeepL.com (free version)
